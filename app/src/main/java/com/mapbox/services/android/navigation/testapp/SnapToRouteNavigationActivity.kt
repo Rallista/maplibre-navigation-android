@@ -3,7 +3,7 @@ package com.mapbox.services.android.navigation.testapp
 import android.location.Location
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mapbox.api.directions.v5.models.DirectionsResponse
+import com.mapbox.services.android.navigation.v5.models.DirectionsResponse
 import com.mapbox.geojson.Point
 import com.mapbox.mapboxsdk.location.LocationComponent
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions
