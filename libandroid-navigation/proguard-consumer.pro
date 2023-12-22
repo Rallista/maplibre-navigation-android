@@ -14,6 +14,4 @@
 
 # --- AutoValue ---
 # AutoValue annotations are retained but dependency is compileOnly.
--dontwarn com.google.auto.value.**
--dontwarn com.google.gson.TypeAdapterFactory
--dontwarn com.ryanharter.auto.value.gson.GenerateTypeAdapter
+#-dontwarn com.google.auto.value.**
