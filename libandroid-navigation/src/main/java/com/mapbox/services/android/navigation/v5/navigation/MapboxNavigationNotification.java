@@ -32,6 +32,8 @@ import static com.mapbox.services.android.navigation.v5.navigation.NavigationCon
 import static com.mapbox.services.android.navigation.v5.navigation.NavigationConstants.NAVIGATION_NOTIFICATION_ID;
 import static com.mapbox.services.android.navigation.v5.utils.time.TimeFormatter.formatTime;
 
+import timber.log.Timber;
+
 /**
  * This is in charge of creating the persistent navigation session notification and updating it.
  */
@@ -77,7 +79,11 @@ class MapboxNavigationNotification implements NavigationNotification {
 
   @Override
   public void updateNotification(RouteProgress routeProgress) {
-    updateNotificationViews(routeProgress);
+    try {
+      updateNotificationViews(routeProgress);
+    } catch (Exception e) {
+      Timber.e(e);
+    }
   }
 
   @Override
