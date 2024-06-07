@@ -167,10 +167,10 @@ public class MapboxRouteFetcher extends RouteFetcher {
         return context == null || location == null || routeProgress == null;
     }
 
-    private Callback<com.mapbox.api.directions.v5.models.DirectionsResponse> directionsResponseCallback = new Callback<com.mapbox.api.directions.v5.models.DirectionsResponse>() {
+    private Callback<com.mapbox.services.android.navigation.v5.models.DirectionsResponse> directionsResponseCallback = new Callback<com.mapbox.services.android.navigation.v5.models.DirectionsResponse>() {
         @Override
-        public void onResponse(@NonNull Call<com.mapbox.api.directions.v5.models.DirectionsResponse> call,
-                @NonNull Response<com.mapbox.api.directions.v5.models.DirectionsResponse> response) {
+        public void onResponse(@NonNull Call<com.mapbox.services.android.navigation.v5.models.DirectionsResponse> call,
+                @NonNull Response<com.mapbox.services.android.navigation.v5.models.DirectionsResponse> response) {
             if (!response.isSuccessful()) {
                 return;
             }
@@ -184,7 +184,7 @@ public class MapboxRouteFetcher extends RouteFetcher {
         }
 
         @Override
-        public void onFailure(@NonNull Call<com.mapbox.api.directions.v5.models.DirectionsResponse> call, @NonNull Throwable throwable) {
+        public void onFailure(@NonNull Call<com.mapbox.services.android.navigation.v5.models.DirectionsResponse> call, @NonNull Throwable throwable) {
             updateListenersWithError(throwable);
         }
     };
